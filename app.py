@@ -21,18 +21,13 @@ st.caption("Session-based GA4 clickstream analytics (Interview-ready)")
 # DATA LOADING (SAFE)
 # -------------------------------
 st.header("1️⃣ Load Data")
+@st.cache_data
+def load_data():
+    return pd.read_csv("Data/GA4_synthetic_data.csv")
 
-uploaded_file = st.file_uploader(
-    "Upload GA4 CSV file",
-    type=["csv"]
-)
+df = load_data()
 
-if uploaded_file is None:
-    st.warning("⬆️ Please upload GA4_synthetic_data.csv to start analysis")
-    st.stop()
-
-# READ DATA
-df = pd.read_csv(uploaded_file)
+st.success("✅ Sample GA4 data loaded automatically")
 
 # -------------------------------
 # BASIC CLEANING (MANDATORY)
