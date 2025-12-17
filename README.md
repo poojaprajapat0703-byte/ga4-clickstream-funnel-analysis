@@ -72,17 +72,17 @@ This analysis directly supports:
 
 ga4-clickstream-funnel-analysis/
 │
-├── app.py                 # Main Streamlit application
-├── requirements.txt       # Python dependencies
+├── app.py # Main Streamlit application
+├── requirements.txt # Python dependencies
 │
 ├── Data/
-│   └── sample_data.csv    # GA4-style synthetic clickstream data
+│ └── sample_data.csv # GA4-style synthetic clickstream data
 │
 ├── Notebooks/
-│   ├── GA4_sequence_analysis.ipynb
-│   └── GA4_synthetic_data.ipynb
+│ ├── GA4_sequence_analysis.ipynb
+│ └── GA4_synthetic_data.ipynb
 │
-└── README.md              # Project documentation
+└── README.md # Project documentation
 
 
 🛠️ Tech Stack
