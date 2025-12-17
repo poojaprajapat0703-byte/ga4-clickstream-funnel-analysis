@@ -1,15 +1,17 @@
 📊 GA4 Clickstream Funnel & Sequence Analysis
 
+
 An end-to-end GA4-style clickstream analytics project that analyzes user event sequences, funnels, drop-offs, and conversions using Python, Pandas, and Streamlit.
 Built to simulate real-world GA4 event-level data analysis and deployed as an interactive web app.
+
 
 🔗 Live App:
 👉 https://ga4-clickstream-funnel-analysis-dppqev5mt8jddrw3gnx9j.streamlit.app
 
+
 🚀 Project Overview
 
 Modern analytics teams don’t just look at metrics — they analyze user journeys.
-
 This project replicates how GA4 clickstream data is used in real companies to:
 
 1. Understand how users move through events
@@ -17,18 +19,21 @@ This project replicates how GA4 clickstream data is used in real companies to:
 3. Measure funnel conversion performance
 4. Analyze time between events
 5. Discover high-impact behavioral patterns
+   
 
 🧠 Key Features
 
-✅ Event-level GA4 clickstream analysis
-✅ Session-wise user journey reconstruction
-✅ Top event sequence discovery
-✅ Funnel conversion & drop-off analysis
-✅ Time-to-conversion insights
-✅ Interactive Streamlit dashboard
-✅ Fully deployed & shareable app
+1. Event-level GA4 clickstream analysis
+2. Session-wise user journey reconstruction
+3. Top event sequence discovery
+4. Funnel conversion & drop-off analysis
+5. Time-to-conversion insights
+6. Interactive Streamlit dashboard
+7. Fully deployed & shareable app
+   
 
 📊 What This App Does
+
 1️⃣ Data Loading
 
 1. Upload GA4-style event data
@@ -92,11 +97,11 @@ ga4-clickstream-funnel-analysis/
 
 🎯 Why This Project Stands Out
 
-✔ Mimics real GA4 event-level data
-✔ Business-focused, not just charts
-✔ End-to-end ownership (data → app → deployment)
-✔ Strong storytelling for interviews
-✔ Demonstrates product + analytics thinking
+1. Mimics real GA4 event-level data
+2. Business-focused, not just charts
+3. End-to-end ownership (data → app → deployment)
+4. Strong storytelling for interviews
+5. Demonstrates product + analytics thinking
 
 👩‍💻 Author
 
