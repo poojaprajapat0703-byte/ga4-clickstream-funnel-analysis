@@ -1,5 +1,5 @@
 # ===============================
-# GA4 FUNNEL & SEQUENCE ANALYSIS
+# Clickstream Funnel & User Journey Analysis
 # ===============================
 
 import streamlit as st
@@ -10,24 +10,60 @@ import plotly.express as px
 # PAGE CONFIG
 # -------------------------------
 st.set_page_config(
-    page_title="GA4 Funnel & Sequence Analysis",
+    page_title="Clickstream Funnel & User Journey Analysis",
     layout="wide"
 )
 
-st.title("📊 GA4 Funnel, Drop-off & Time Analysis")
-st.caption("Session-based GA4 clickstream analytics (Interview-ready)")
+st.title("📊 Clickstream Funnel & User Journey Analysis")
+st.caption("Upload event-level clickstream data to analyze user journeys, funnels, drop-offs, and conversions")
 
 # -------------------------------
-# DATA LOADING (SAFE)
+# DATA LOADING (AUTOMATED + USER UPLOAD)
 # -------------------------------
-st.header("1️⃣ Load Data")
+st.header("1️⃣ Load Clickstream Data")
+
+# SCHEMA GOES HERE
+st.subheader("Expected Input Data Schema")
+st.markdown("""
+- user_id (string / int)
+- session_id (string / int)
+- event_name (string)
+- event_date (YYYYMMDD)
+- engagement_time_msec (numeric)
+""")
+
 @st.cache_data
-def load_data():
+def load_sample_data():
     return pd.read_csv("Data/GA4_synthetic_data.csv")
 
-df = load_data()
+uploaded_file = st.file_uploader(
+    "Upload your clickstream CSV file",
+    type=["csv"]
+)
 
-st.success("✅ Sample GA4 data loaded automatically")
+# LOGIC: uploaded file > sample data
+
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.success("✅ Custom data uploaded successfully")
+else:
+    df = load_sample_data()
+    st.info("ℹ️ Sample clickstream data loaded automatically")
+
+ ## BASIC VALIDATION
+
+required_columns = {
+    "user_id",
+    "session_id",
+    "event_name",
+    "event_date",
+    "engagement_time_msec"
+}
+missing_cols = required_columns - set(df.columns)
+
+if missing_cols:
+    st.error(f"❌ Missing required columns: {missing_cols}")
+    st.stop()
 
 # -------------------------------
 # BASIC CLEANING (MANDATORY)
@@ -38,7 +74,7 @@ df = df.sort_values(
     by=["user_id", "session_id", "engagement_time_msec"]
 )
 
-st.success("✅ Data loaded successfully")
+st.success("✅ Data validated & prepared for analysis")
 
 # -------------------------------
 # DATA OVERVIEW
