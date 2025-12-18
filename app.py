@@ -255,4 +255,4 @@ st.plotly_chart(fig_time, use_container_width=True)
 # =========================================================
 # FINAL NOTE
 # =========================================================
-st.success("✅ Full GA4 analysis loaded successfully — no hidden errors")
+st.success("✅ Full  analysis loaded successfully — no hidden errors")
