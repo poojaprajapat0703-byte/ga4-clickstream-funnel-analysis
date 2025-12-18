@@ -6,7 +6,7 @@ Built to simulate real-world GA4 event-level data analysis and deployed as an in
 
 
 🔗 Live App:
-👉 https://ga4-clickstream-funnel-analysis-dppqevf5mt8jddrw3gnx9j.streamlit.app/
+👉 https://clickstream-funnel-user-journey-analysis-a2nmsruujicc7ijuc2lxs.streamlit.app/
 
 
 🚀 Project Overview
