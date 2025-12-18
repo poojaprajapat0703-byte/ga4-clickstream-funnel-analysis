@@ -19,7 +19,16 @@ This project replicates how GA4 clickstream data is used in real companies to:
 3. Measure funnel conversion performance
 4. Analyze time between events
 5. Discover high-impact behavioral patterns
-   
+
+🧠Input Data Schema
+
+Upload a CSV file with the following required columns:
+
+1. user_id – user identifier
+2. session_id – session identifier
+3. event_name – event name (page_view, add_to_cart, purchase, etc.)
+4. event_date – date in YYYYMMDD format
+5. engagement_time_msec – time spent in milliseconds   
 
 🧠 Key Features
 
